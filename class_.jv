@@ -1,0 +1,119 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        student mark = new student();
+        mark.setAge(22);
+        mark.setName("Morris");
+        mark.setId(2001);
+        System.out.println(mark.getName() + " is " + mark.getAge() + " years old.");
+
+        student thomas = new student();
+        thomas.setId(2002);
+        thomas.setName("Thomas");
+        thomas.setAge(23);
+        System.out.println(thomas.getName() + " is " + thomas.getAge() + " years old.");
+    }
+}
+
+package com.company;
+
+public class student {
+
+    int age;
+    String name;
+    int id;
+
+    public int getAge()
+    {
+        return age;
+    }
+    public void setAge(int age)
+    {
+        this.age = age;
+    }
+    public int getId(){
+        return id;
+    }
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+}
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+	 Cube calc = new Cube();// constructor
+     calc.setBreadth(2);
+     calc.setHeight(3);
+     calc.setLength(5);
+
+     Cube calc2 = new Cube(6,8,9);
+
+
+     System.out.println("Volume is " + calc.getHeight() * calc.getBreadth() * calc.getLength() + " units cubed");
+        System.out.println("Volume " + calc.getCubeVolume());
+        System.out.println("Volume 2 is " + calc2.getCubeVolume());
+
+
+    }
+
+}
+
+package com.company;
+
+public class Cube {
+    int length;
+    int breadth;
+    int height;
+    Cube() {
+        System.out.println("We are in a constructor");
+        length = 2;
+        height = 3;
+        breadth = 5;
+    }
+
+    public Cube(int l, int b, int h) {
+        length = l;
+        height = h;
+        breadth = b;
+    }
+
+    public  int getCubeVolume() {
+        return (length * breadth * height);
+    }
+
+
+    public int getBreadth() {
+        return breadth;
+    }
+    public int getHeight() {
+        return height;
+    }
+    public int getLength() {
+        return length;
+    }
+    public void setBreadth(int breadth) {
+        this.breadth = breadth;
+    }
+    public void setLength(int length) {
+        this.length = length;
+    }
+    public void setHeight(int height) {
+        this.height = height;
+    }
+}
